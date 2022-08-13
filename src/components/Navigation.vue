@@ -5,16 +5,14 @@
       app
       temporary
       dark
-      src="@/assets/img/bgDrawer.jpg"
     >
       <v-list>
         <v-list-item>
           <v-list-item-avatar>
-            <img src="@/assets/img/logo.png" alt="Logo" />
+            <img src="@/assets/img/cat-final-2.png" alt="Logo" />
           </v-list-item-avatar>
           <v-list-item-content>
-            <v-list-item-title class="title">Calango</v-list-item-title>
-            <v-list-item-subtitle>WEB</v-list-item-subtitle>
+            <v-list-item-title class="title">Kittycaketoken</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
       </v-list>
@@ -49,7 +47,7 @@
       :class="{ expand: flat }"
     >
       <v-toolbar-title>
-        <v-img src="@/assets/img/logo.png" max-width="50px" />
+        <v-img src="@/assets/img/cat-final-2.png" max-width="50px" />
       </v-toolbar-title>
       <v-spacer />
       <v-app-bar-nav-icon
@@ -58,20 +56,17 @@
         v-if="isXs"
       />
       <div v-else>
-        <v-btn text @click="$vuetify.goTo('#hero')">
-          <span class="mr-2">Home</span>
+        <v-btn text @click="$vuetify.goTo('#about')">
+          <span class="mr-2">About Us</span>
         </v-btn>
         <v-btn text @click="$vuetify.goTo('#features')">
-          <span class="mr-2">Sobre</span>
-        </v-btn>
-        <v-btn text @click="$vuetify.goTo('#download')">
-          <span class="mr-2">Download</span>
+          <span class="mr-2">Our Features</span>
         </v-btn>
         <v-btn text @click="$vuetify.goTo('#pricing')">
-          <span class="mr-2">Preços</span>
+          <span class="mr-2">See Products</span>
         </v-btn>
-        <v-btn rounded outlined text @click="$vuetify.goTo('#contact')">
-          <span class="mr-2">Contate-nos</span>
+        <v-btn color="primary" rounded @click="$vuetify.goTo('#footer')">
+          <span class="mr-2">Connect Wallet</span>
         </v-btn>
       </div>
     </v-app-bar>
@@ -96,10 +91,9 @@ export default {
     isXs: false,
     items: [
       ["mdi-home-outline", "Home", "#hero"],
-      ["mdi-information-outline", "Sobre", "#features"],
-      ["mdi-download-box-outline", "Download", "#download"],
-      ["mdi-currency-usd", "Preços", "#pricing"],
-      ["mdi-email-outline", "Contatos", "#contact"],
+      ["mdi-information-outline", "About Us", "#about"],
+      ["mdi-download-box-outline", "Our Features", "#features"],
+      ["mdi-email-outline", "See Products", "#contact"],
     ],
   }),
   props: {

@@ -2,6 +2,8 @@ import Vue from 'vue'
 import App from './App.vue'
 import vuetify from './plugins/vuetify';
 import VueYouTubeEmbed from 'vue-youtube-embed'
+import VueMeta from 'vue-meta'
+Vue.use(VueMeta)
 // import firebase from 'firebase/app'
 // import 'firebase/firestore'
 
