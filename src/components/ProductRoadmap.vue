@@ -1,10 +1,20 @@
 <template>
     <div class="container" style="max-width: 1000px">
-        <h1 class="display-3 text-center white--text font-weight-bold">
+        <h1
+            class="display-3 text-center white--text font-weight-bold"
+            data-aos="fade-down"
+            data-aos-duration="500"
+            data-aos-delay="200"
+        >
             Product Roadmap
         </h1>
         <div class="row">
-            <div class="col-md-12">
+            <div
+                class="col-md-12"
+                data-aos="flip-down"
+                data-aos-duration="500"
+                data-aos-delay="200"
+            >
                 <div class="swiper-container">
                     <!-- <p class="swiper-control">
                         <v-btn text color="white" class="prev-slide"

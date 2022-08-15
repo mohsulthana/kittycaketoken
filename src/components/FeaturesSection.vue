@@ -1,13 +1,24 @@
 <template>
     <section id="features">
         <v-container fluid id="features" style="margin: 120px 0">
-            <h1 class="display-3 text-center white--text font-weight-bold">Features We Provide You</h1>
-            <v-row align="center" justify="center" class="my-8">
+            <h1
+                class="display-3 text-center white--text font-weight-bold"
+                data-aos="fade-down"
+                data-aos-duration="500"
+                data-aos-delay="200"
+            >
+                Features We Provide You
+            </h1>
+            <v-row
+                align="center"
+                justify="center"
+                class="my-8"
+            >
                 <v-col cols="10">
                     <v-row align="stretch" justify="space-around">
                         <v-col
                             cols="12"
-                            sm="4"
+                            sm="2"
                             class="text-left"
                             v-for="(feature, i) in features"
                             :key="i"
@@ -17,6 +28,9 @@
                                     class="card-features"
                                     :elevation="hover ? 10 : 4"
                                     :class="{ up: hover }"
+                                    :data-aos="i < 3 ? 'fade-right' : 'fade-left'"
+                                    data-aos-duration="500"
+                                    data-aos-delay="200"
                                 >
                                     <v-img
                                         :src="feature.img"
@@ -87,7 +101,7 @@ export default {
     gap: 12px;
     height: 100%;
     transition: 0.5s ease-out;
-    background: rgba(255, 255, 255, .15);
+    background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(15px);
     color: white !important;
     border: 1px solid #afafaf;

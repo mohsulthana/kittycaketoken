@@ -1,16 +1,44 @@
 <template>
     <section id="buy">
+        <v-snackbar
+            v-model="snackbar"
+            rounded="pill"
+            color="success"
+            timeout="2000"
+            :absolute="true"
+        >
+            Token Address has been copied to clipboard!
+
+            <template v-slot:action="{ attrs }">
+                <v-btn
+                    color="white"
+                    text
+                    v-bind="attrs"
+                    @click="snackbar = false"
+                >
+                    Close
+                </v-btn>
+            </template>
+        </v-snackbar>
         <v-container>
             <h1
                 class="display-3 text-left white--text font-weight-bold"
                 style="margin-bottom: 80px"
+                data-aos="fade-down"
+                data-aos-duration="500"
+                data-aos-delay="200"
             >
                 Are You Ready To <span class="primary--text">Buy?</span>
             </h1>
 
             <v-row>
                 <v-col class="white--text gap-8">
-                    <div class="step-1">
+                    <div
+                        class="step-1"
+                        data-aos="fade-up"
+                        data-aos-duration="500"
+                        data-aos-delay="200"
+                    >
                         <h1 class="text-h5">Step 1</h1>
                         <h2 class="primary--text text-h5">
                             Download and setup MetaMask or TrustWallet
@@ -28,7 +56,12 @@
                             </li>
                         </ol>
                     </div>
-                    <div class="step-2">
+                    <div
+                        class="step-2"
+                        data-aos="fade-up"
+                        data-aos-duration="500"
+                        data-aos-delay="200"
+                    >
                         <h1 class="text-h5">Step 2</h1>
                         <h2 class="primary--text text-h5">
                             Buy and send BNB to Metamask or TrustWallet
@@ -39,7 +72,12 @@
                             wallet address. BEP-20 addresses start with a "0x".
                         </p>
                     </div>
-                    <div class="step-3">
+                    <div
+                        class="step-3"
+                        data-aos="fade-up"
+                        data-aos-duration="500"
+                        data-aos-delay="200"
+                    >
                         <h1 class="text-h5">Step 3</h1>
                         <h2 class="primary--text text-h5">
                             Head over to our Swap to buy $CAKE
@@ -47,12 +85,21 @@
                         <p class="text-h6">
                             Click here to go to our Swap. Select KittyCake or
                             use our contract address:
-                            0xc22e8114818a918260662375450e19ac73d32852. Set the
-                            slippage tolerance to 15% (sometimes it may be 18%,
-                            depending on how much demand there is).
+                            <span ref="tokenAddress"
+                                >0xc22e8114818a918260662375450e19ac73d32852</span
+                            >
+                            <v-icon @click="copyToken" color="primary"
+                                >mdi-content-copy</v-icon
+                            >. Set the slippage tolerance to 15% (sometimes it
+                            may be 18%, depending on how much demand there is).
                         </p>
                     </div>
-                    <div class="step-4">
+                    <div
+                        class="step-4"
+                        data-aos="fade-up"
+                        data-aos-duration="500"
+                        data-aos-delay="200"
+                    >
                         <h1 class="text-h5">Step 4</h1>
                         <h2 class="primary--text text-h5">
                             View $KCAKE and HODL
@@ -63,7 +110,12 @@
                             Wallet to view your $KCAKE. Lastly, HODL!
                         </p>
                     </div>
-                    <div class="step-5">
+                    <div
+                        class="step-5"
+                        data-aos="fade-up"
+                        data-aos-duration="500"
+                        data-aos-delay="200"
+                    >
                         <h1 class="text-h5">Last step,</h1>
                         <h2 class="primary--text text-h5">
                             Add the Pancake Swap Token address to see your
@@ -71,8 +123,12 @@
                         </h2>
                         <p class="text-h6">
                             Pancake Swap Token Address:
-                            0xc22e8114818a918260662375450e19ac73d32852. Tap to
-                            copy address.
+                            <span ref="tokenAddress"
+                                >0xc22e8114818a918260662375450e19ac73d32852</span
+                            >.
+                            <v-icon @click="copyToken" color="primary"
+                                >mdi-content-copy</v-icon
+                            >
                         </p>
                     </div>
                 </v-col>
@@ -84,7 +140,16 @@
 <script>
 export default {
     data() {
-        return {};
+        return {
+            snackbar: false,
+        };
+    },
+    methods: {
+        copyToken() {
+            let token = this.$refs.tokenAddress.innerHTML;
+            // navigator.clipboard.writeText(token)
+            this.snackbar = true;
+        },
     },
 };
 </script>

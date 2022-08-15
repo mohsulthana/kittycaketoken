@@ -4,14 +4,24 @@
             <v-row align="center" justify="center">
                 <v-col cols="10">
                     <v-row align="center" justify="center" class="py-8">
-                        <v-col cols="12" md="3" class="d-none d-md-flex">
+                        <v-col
+                            cols="12"
+                            md="3"
+                            class="d-none d-md-flex"
+                        >
                             <v-img
                                 src="@/assets/img/cat-final-2.png"
                                 class="d-block ml-auto mr-auto"
                                 max-width="400px"
                             />
                         </v-col>
-                        <v-col cols="12" md="7">
+                        <v-col
+                            cols="12"
+                            md="7"
+                            data-aos="fade-left"
+                            data-aos-duration="500"
+                            data-aos-delay="200"
+                        >
                             <h1 class="font-weight-medium display-1">
                                 KittyCake is an advanced hyper-deflationary
                                 auto-rewards token on the Binance Smart Chain.

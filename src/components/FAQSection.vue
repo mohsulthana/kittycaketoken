@@ -1,10 +1,21 @@
 <template>
     <section id="faq">
         <v-container>
-            <h1 class="display-3 text-center white--text font-weight-bold">
+            <h1
+                class="display-3 text-center white--text font-weight-bold"
+                data-aos="fade-down"
+                data-aos-duration="500"
+                data-aos-delay="200"
+            >
                 Frequently Asked Questions
             </h1>
-            <v-row align="center" justify="center">
+            <v-row
+                align="center"
+                justify="center"
+                data-aos="fade-up"
+                data-aos-duration="500"
+                data-aos-delay="200"
+            >
                 <v-expansion-panels
                     style="margin-top: 80px; width: 1080px; border-radius: 12px"
                 >
@@ -19,7 +30,12 @@
                 </v-expansion-panels>
             </v-row>
         </v-container>
-        <v-container class="mt-5">
+        <v-container
+            class="mt-5"
+            data-aos="fade-up"
+            data-aos-duration="500"
+            data-aos-delay="200"
+        >
             <v-row align="center" justify="center">
                 <v-col class="text-center">
                     <v-btn
@@ -28,7 +44,8 @@
                         outlined
                         rounded
                         style="background-color: white"
-                        >Read More FAQs <v-icon color="primary">mdi-arrow-right</v-icon>
+                        >Read More FAQs
+                        <v-icon color="primary">mdi-arrow-right</v-icon>
                     </v-btn>
                 </v-col>
             </v-row>
