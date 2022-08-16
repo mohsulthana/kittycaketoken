@@ -22,15 +22,15 @@
                             class="text-left"
                             v-for="(feature, i) in features"
                             :key="i"
+                                                                data-aos="fade-up"
+                                    data-aos-duration="500"
+                                    data-aos-delay="200"
                         >
                             <v-hover v-slot:default="{ hover }">
                                 <v-card
                                     class="card-features"
                                     :elevation="hover ? 10 : 4"
                                     :class="{ up: hover }"
-                                    :data-aos="i < 3 ? 'fade-right' : 'fade-left'"
-                                    data-aos-duration="500"
-                                    data-aos-delay="200"
                                 >
                                     <v-img
                                         :src="feature.img"

@@ -1,27 +1,38 @@
 <template>
     <section id="hero">
-        <v-parallax dark src="@/assets/img/bghero1.jpg" height="850">
+        <v-parallax dark height="960">
             <v-row align="center" justify="center">
                 <v-col cols="10">
                     <v-row align="center" justify="center">
-                        <v-col cols="12" md="6" xl="8">
-                            <h1 class="display-2 font-weight-bold mb-4">
+                        <v-img
+                            src="@/assets/img/cat-final.webp"
+                            :style="{
+                                top: topPosition,
+                                left: leftPosition,
+                                right: rightPosition,
+                                height: imageHeight,
+                            }"
+                            style="position: absolute; z-index: -999"
+                        ></v-img>
+                        <v-col cols="12" md="6" xl="8" :z-index="99">
+                            <h1 class="display-4 font-weight-bold mb-4">
                                 Hold KittyCake. <br />
                                 Earn passive income paid in Cake.
                             </h1>
                             <v-btn
                                 color="primary"
                                 rounded
-                                large
+                                x-large
                                 @click="$vuetify.goTo('#features')"
                                 class="mt-5"
                             >
-                                Connect Wallet <v-icon color="white">mdi-plus</v-icon>
+                                Connect Wallet
+                                <v-icon color="white">mdi-plus</v-icon>
                             </v-btn>
                             <v-btn
                                 color="white"
                                 rounded
-                                large
+                                x-large
                                 text
                                 @click="$vuetify.goTo('#features')"
                                 class="mt-5"
@@ -29,13 +40,7 @@
                                 Buy KittyCake
                             </v-btn>
                         </v-col>
-                        <v-col
-                            cols="12"
-                            md="6"
-                            xl="4"
-                            class="hidden-sm-and-down"
-                        >
-                        </v-col>
+                        <v-col cols="12" md="6" xl="4"> </v-col>
                     </v-row>
                 </v-col>
             </v-row>
@@ -50,6 +55,54 @@ export default {
             dialog: false,
             videoId: "i8IvvHJssWE",
         };
+    },
+    computed: {
+        topPosition() {
+            switch (this.$vuetify.breakpoint.name) {
+                case "sm":
+                    return 460 + "px";
+                case "md":
+                    return 200 + "px";
+                case "lg":
+                    return 20 + "px";
+            }
+        },
+        leftPosition() {
+            switch (this.$vuetify.breakpoint.name) {
+                case "sm":
+                    return "auto";
+                case "md":
+                    return 300 + "px";
+                case "lg":
+                    return 300 + "px";
+            }
+        },
+        rightPosition() {
+            switch (this.$vuetify.breakpoint.name) {
+                case "sm":
+                    return "auto";
+                default:
+                    return "unset";
+            }
+        },
+        imageHeight() {
+            switch (this.$vuetify.breakpoint.name) {
+                case "sm":
+                    return 850 + "px";
+                case "md":
+                    return 950 + "px";
+                case "lg":
+                    return 1580 + "px";
+                case "xl":
+                    return 1580 + "px";
+            }
+        },
+        isMobile() {
+            return this.$vuetify.breakpoint.smAndDown;
+        },
+        isTablet() {
+            return this.$vuetify.breakpoint.mdAndDown;
+        },
     },
     watch: {
         dialog(value) {
@@ -83,6 +136,9 @@ export default {
 </script>
 
 <style lang="scss">
+.v-parallax {
+    background: linear-gradient(180deg, rgba(106, 0, 108, 0.9) 35.5%, rgba(68, 0, 155, 0.9) 100%) !important;
+}
 .circle {
     stroke: white;
     stroke-dasharray: 650;

@@ -31,15 +31,7 @@
 
 <style>
 #app {
-    background: linear-gradient(
-        179.94deg,
-        rgba(62, 0, 114, 0.9) 17.33%,
-        rgba(58, 1, 22, 0.7) 39.67%,
-        rgba(0, 6, 60, 0.9) 77.47%,
-        #797eb1 100.34%,
-        rgba(2, 4, 26, 0.72) 100.34%,
-        rgba(19, 0, 34, 0.7) 100.34%
-    );
+background: linear-gradient(179.94deg, rgba(106, 0, 108, 0.9) 16.15%, rgba(45, 0, 102, 0.7) 38.81%, rgba(0, 6, 60, 0.9) 89.43%, #797EB1 100.34%, rgba(2, 4, 26, 0.72) 100.34%, #130022 100.34%);
     background-blend-mode: multiply;
     backdrop-filter: blur(100px);
 }

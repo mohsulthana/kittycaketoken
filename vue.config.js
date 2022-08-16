@@ -8,11 +8,6 @@ module.exports = {
   ],
   configureWebpack: {
     plugins: [
-      new CompressionPlugin({
-        filename: '[path][base].br',
-        algorithm: 'brotliCompress',
-        test: /\.js$/,
-      }),
       new BundleAnalyzerPlugin(),
       new webpack.IgnorePlugin({
         resourceRegExp: /^\.\/locale$/,

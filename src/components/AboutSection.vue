@@ -8,6 +8,9 @@
                             cols="12"
                             md="3"
                             class="d-none d-md-flex"
+                            data-aos="fade-right"
+                            data-aos-duration="500"
+                            data-aos-delay="200"
                         >
                             <v-img
                                 src="@/assets/img/cat-final-2.webp"
@@ -17,7 +20,7 @@
                         </v-col>
                         <v-col
                             cols="12"
-                            md="7"
+                            md="9"
                             data-aos="fade-left"
                             data-aos-duration="500"
                             data-aos-delay="200"
@@ -51,7 +54,7 @@
 
 <style scoped>
 #about {
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(15px);
     box-shadow: 12px 4px 44px rgba(0, 0, 0, 0.45);
     color: white;
