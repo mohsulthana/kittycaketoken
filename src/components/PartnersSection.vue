@@ -15,7 +15,9 @@
                                 <img
                                     :src="partner.image"
                                     :alt="partner.name"
-                                    style="max-height: 64px; margin: 0 16px"
+                                    height="64"
+                                    width="100%"
+                                    style="margin: 0 16px"
                                 />
                             </v-slide-item>
                         </v-slide-group>

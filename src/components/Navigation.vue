@@ -9,7 +9,7 @@
       <v-list>
         <v-list-item>
           <v-list-item-avatar>
-            <img src="@/assets/img/cat-final-2.png" alt="Logo" />
+            <img src="@/assets/img/cat-final-2.webp" alt="Logo" />
           </v-list-item-avatar>
           <v-list-item-content>
             <v-list-item-title class="title">Kittycaketoken</v-list-item-title>
@@ -47,7 +47,7 @@
       :class="{ expand: flat }"
     >
       <v-toolbar-title>
-        <v-img src="@/assets/img/cat-final-2.png" max-width="50px" />
+        <v-img src="@/assets/img/cat-final-2.webp" max-width="50px" />
       </v-toolbar-title>
       <v-spacer />
       <v-app-bar-nav-icon

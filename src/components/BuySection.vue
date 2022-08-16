@@ -88,8 +88,8 @@
                             <span ref="tokenAddress"
                                 >0xc22e8114818a918260662375450e19ac73d32852</span
                             >
-                            <v-icon @click="copyToken" color="primary"
-                                >mdi-content-copy</v-icon
+                            <v-btn icon @click="copyToken" color="primary"
+                                ><v-icon>mdi-content-copy</v-icon></v-btn
                             >. Set the slippage tolerance to 15% (sometimes it
                             may be 18%, depending on how much demand there is).
                         </p>
@@ -126,8 +126,8 @@
                             <span ref="tokenAddress"
                                 >0xc22e8114818a918260662375450e19ac73d32852</span
                             >.
-                            <v-icon @click="copyToken" color="primary"
-                                >mdi-content-copy</v-icon
+                            <v-btn icon @click="copyToken" color="primary"
+                                ><v-icon>mdi-content-copy</v-icon></v-btn
                             >
                         </p>
                     </div>

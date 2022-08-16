@@ -43,7 +43,10 @@
     background-blend-mode: multiply;
     backdrop-filter: blur(100px);
 }
-.theme--light.v-expansion-panels .v-expansion-panel-header .v-expansion-panel-header__icon .v-icon {
+.theme--light.v-expansion-panels
+    .v-expansion-panel-header
+    .v-expansion-panel-header__icon
+    .v-icon {
     color: white;
 }
 </style>
@@ -75,7 +78,18 @@ export default {
     },
 
     metaInfo: {
-        title: 'Kittycaketoken'
+        title: "Kittycaketoken",
+        meta: [
+            { charset: "utf-8" },
+            {
+                name: "description",
+                content: "KittyCake is an advanced hyper-deflationary auto-rewards token on the Binance Smart Chain.",
+            },
+            {
+                name: "viewport",
+                content: "width=device-width, initial-scale=1",
+            },
+        ],
     },
 
     data: () => ({

@@ -10,7 +10,7 @@
                             class="d-none d-md-flex"
                         >
                             <v-img
-                                src="@/assets/img/cat-final-2.png"
+                                src="@/assets/img/cat-final-2.webp"
                                 class="d-block ml-auto mr-auto"
                                 max-width="400px"
                             />
