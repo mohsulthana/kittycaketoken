@@ -9,17 +9,16 @@
                         :class="[{ up: hover }, leftCardAlign]"
                         :width="`${width}%`"
                     >
-                        <v-img
-                            src="@/assets/img/twitter.png"
-                            max-width="70px"
-                            class="d-block mr-auto"
-                        ></v-img>
-                        <h1 class="font-weight-bold" style="color: #39a9da">
-                            Stay up-to-date on Twitter!
-                        </h1>
-                        <v-btn block outlined rounded color="#39A9DA"
-                            >Follow <v-icon>mdi-arrow-right</v-icon></v-btn
+                        <p
+                            class="font-weight-bold headline"
+                            style="color: #39a9da"
                         >
+                            Stay up-to-date on Twitter!
+                        </p>
+                        <twitter-button
+                            v-bind:isBlank="false"
+                            btnText="Follow us"
+                        />
                     </v-card>
                 </v-col>
                 <v-col sm="12" md="6">
@@ -29,17 +28,16 @@
                         :class="[{ up: hover }, rightCardAlign]"
                         :width="`${width}%`"
                     >
-                        <v-img
-                            src="@/assets/img/telegram.png"
-                            max-width="70px"
-                            class="d-block mr-auto"
-                        ></v-img>
-                        <h1 class="font-weight-bold" style="color: #38a1f2">
-                            Join our Telegram Community!
-                        </h1>
-                        <v-btn block outlined rounded color="#38A1F2"
-                            >Join <v-icon>mdi-arrow-right</v-icon></v-btn
+                        <p
+                            class="font-weight-bold headline"
+                            style="color: #38a1f2"
                         >
+                            Join our Telegram Community!
+                        </p>
+                        <telegram-button
+                            v-bind:isBlank="false"
+                            btnText="Join Us"
+                        />
                     </v-card>
                 </v-col>
             </v-row>
@@ -80,11 +78,21 @@
     transform: translateY(-20px);
     transition: 0.5s ease-out;
 }
+.share-button {
+    border-radius: 4px !important;
+}
 </style>
 
 <script>
+import TwitterButton from "vue-share-buttons/src/components/TwitterButton";
+import TelegramButton from "vue-share-buttons/src/components/TelegramButton";
+
 export default {
     data: () => ({}),
+    components: {
+        TwitterButton,
+        TelegramButton,
+    },
     computed: {
         width() {
             switch (this.$vuetify.breakpoint.name) {
@@ -103,31 +111,31 @@ export default {
         leftCardAlign() {
             switch (this.$vuetify.breakpoint.name) {
                 case "xs":
-                    return 'mx-auto';
+                    return "mx-auto";
                 case "sm":
-                    return 'mx-auto';
+                    return "mx-auto";
                 case "md":
-                    return 'ml-auto';
+                    return "ml-auto";
                 case "lg":
-                    return 'ml-auto';
+                    return "ml-auto";
                 case "xl":
-                    return 'ml-auto';
+                    return "ml-auto";
             }
         },
         rightCardAlign() {
             switch (this.$vuetify.breakpoint.name) {
                 case "xs":
-                    return 'mx-auto';
+                    return "mx-auto";
                 case "sm":
-                    return 'mx-auto';
+                    return "mx-auto";
                 case "md":
-                    return 'mr-auto';
+                    return "mr-auto";
                 case "lg":
-                    return 'mr-auto';
+                    return "mr-auto";
                 case "xl":
-                    return 'mr-auto';
+                    return "mr-auto";
             }
-        }
+        },
     },
 };
 </script>

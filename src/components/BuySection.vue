@@ -156,10 +156,8 @@ export default {
 
 <style scoped>
 #buy {
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(50px);
     padding: 120px 0;
-    box-shadow: 12px 4px 44px rgba(0, 0, 0, 0.15);
+    box-shadow: 12px 4px 44px rgba(0, 0, 0, 0.05);
 }
 .step-1,
 .step-2,

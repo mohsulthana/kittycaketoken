@@ -25,11 +25,11 @@
                             data-aos-duration="500"
                             data-aos-delay="200"
                         >
-                            <h1 class="font-weight-medium display-1">
+                            <h1 class="font-weight-medium display-3">
                                 KittyCake is an advanced hyper-deflationary
                                 auto-rewards token on the Binance Smart Chain.
                             </h1>
-                            <h1 class="font-weight-light h1">
+                            <h1 class="font-weight-light display-2">
                                 KittyCake rewards holders with his favorite
                                 food, $CAKE, every hour! We also have a
                                 dashboard to track your $CAKE rewards
@@ -54,9 +54,10 @@
 
 <style scoped>
 #about {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(15px);
-    box-shadow: 12px 4px 44px rgba(0, 0, 0, 0.45);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    height: 660px;
     color: white;
 }
 </style>

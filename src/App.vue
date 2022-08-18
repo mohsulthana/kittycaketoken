@@ -31,7 +31,11 @@
 
 <style>
 #app {
-background: linear-gradient(179.94deg, rgba(106, 0, 108, 0.9) 16.15%, rgba(45, 0, 102, 0.7) 38.81%, rgba(0, 6, 60, 0.9) 89.43%, #797EB1 100.34%, rgba(2, 4, 26, 0.72) 100.34%, #130022 100.34%);
+    background: linear-gradient(
+        180deg,
+        rgba(68, 0, 155, 0.9) 1.27%,
+        rgba(22, 85, 131, 0.9) 100%
+    );
     background-blend-mode: multiply;
     backdrop-filter: blur(100px);
 }

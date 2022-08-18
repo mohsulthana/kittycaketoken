@@ -1,50 +1,55 @@
 <template>
     <section id="hero">
-        <v-parallax dark height="960">
-            <v-row align="center" justify="center">
-                <v-col cols="10">
-                    <v-row align="center" justify="center">
-                        <v-img
-                            src="@/assets/img/cat-final.webp"
-                            :style="{
-                                top: topPosition,
-                                left: leftPosition,
-                                right: rightPosition,
-                                height: imageHeight,
-                            }"
-                            style="position: absolute; z-index: -999"
-                        ></v-img>
-                        <v-col cols="12" md="6" xl="8" :z-index="99">
-                            <h1 class="display-4 font-weight-bold mb-4">
-                                Hold KittyCake. <br />
-                                Earn passive income paid in Cake.
-                            </h1>
-                            <v-btn
-                                color="primary"
-                                rounded
-                                x-large
-                                @click="$vuetify.goTo('#features')"
-                                class="mt-5"
-                            >
-                                Connect Wallet
-                                <v-icon color="white">mdi-plus</v-icon>
-                            </v-btn>
-                            <v-btn
-                                color="white"
-                                rounded
-                                x-large
-                                text
-                                @click="$vuetify.goTo('#features')"
-                                class="mt-5"
-                            >
-                                Buy KittyCake
-                            </v-btn>
-                        </v-col>
-                        <v-col cols="12" md="6" xl="4"> </v-col>
-                    </v-row>
+        <v-row align="center" justify="center">
+            <v-col cols="10">
+                <v-img
+                    ref="bigCatImage"
+                    class="bigcat"
+                    src="@/assets/img/cat-final.webp"
+                    :style="{
+                        top: topPosition,
+                        left: leftPosition,
+                        right: rightPosition,
+                        height: imageHeight,
+                    }"
+                    style="position: absolute; z-index: -999"
+                ></v-img>
+                <v-col
+                    cols="12"
+                    lg="6"
+                    md="12"
+                    xl="8"
+                    :z-index="99"
+                    :align-self="start"
+                >
+                    <h1 class="display-4 font-weight-bold mb-4">
+                        Hold KittyCake. <br />
+                        Earn passive income paid in Cake.
+                    </h1>
+                    <v-btn
+                        color="primary"
+                        rounded
+                        x-large
+                        @click="$vuetify.goTo('#features')"
+                        class="mt-5"
+                    >
+                        Connect Wallet
+                        <v-icon color="white">mdi-plus</v-icon>
+                    </v-btn>
+                    <v-btn
+                        color="white"
+                        rounded
+                        x-large
+                        text
+                        @click="$vuetify.goTo('#features')"
+                        class="mt-5"
+                    >
+                        Buy KittyCake
+                    </v-btn>
                 </v-col>
-            </v-row>
-        </v-parallax>
+                <v-col cols="12" md="6" xl="4"> </v-col>
+            </v-col>
+        </v-row>
     </section>
 </template>
 
@@ -59,27 +64,35 @@ export default {
     computed: {
         topPosition() {
             switch (this.$vuetify.breakpoint.name) {
+                case "xs":
+                    return 460 + "px";
                 case "sm":
                     return 460 + "px";
                 case "md":
-                    return 200 + "px";
-                case "lg":
-                    return 20 + "px";
+                    return 460 + "px";
+                default:
+                    return 40 + "px";
             }
         },
         leftPosition() {
             switch (this.$vuetify.breakpoint.name) {
+                case "xs":
+                    return "auto";
                 case "sm":
                     return "auto";
                 case "md":
-                    return 300 + "px";
-                case "lg":
-                    return 300 + "px";
+                    return "auto";
+                default:
+                    return 450 + "px";
             }
         },
         rightPosition() {
             switch (this.$vuetify.breakpoint.name) {
+                case "xs":
+                    return "auto";
                 case "sm":
+                    return "auto";
+                case "md":
                     return "auto";
                 default:
                     return "unset";
@@ -87,14 +100,14 @@ export default {
         },
         imageHeight() {
             switch (this.$vuetify.breakpoint.name) {
+                case "xs":
+                    return 850 + "px";
                 case "sm":
                     return 850 + "px";
                 case "md":
-                    return 950 + "px";
-                case "lg":
-                    return 1580 + "px";
-                case "xl":
-                    return 1580 + "px";
+                    return 850 + "px";
+                default:
+                    return 1680 + "px";
             }
         },
         isMobile() {
@@ -104,6 +117,9 @@ export default {
             return this.$vuetify.breakpoint.mdAndDown;
         },
     },
+    mounted() {
+        window.addEventListener("scroll", this.positionScroll);
+    },
     watch: {
         dialog(value) {
             if (!value) {
@@ -112,6 +128,16 @@ export default {
         },
     },
     methods: {
+        positionScroll() {
+            let imageStyle = this.$refs.bigCatImage.$el.style;
+            var currentTop = this.$refs.bigCatImage.$el.offsetTop;
+
+            // if (document.body.scrollTop === 0) {
+            //     imageStyle.top = currentTop + 20 + "px";
+            // } else {
+            //     imageStyle.top = currentTop - 20 + "px";
+            // }
+        },
         ready(event) {
             this.player = event.target;
         },
@@ -136,8 +162,10 @@ export default {
 </script>
 
 <style lang="scss">
-.v-parallax {
-    background: linear-gradient(180deg, rgba(106, 0, 108, 0.9) 35.5%, rgba(68, 0, 155, 0.9) 100%) !important;
+#hero {
+    height: 996px;
+    display: flex;
+    color: white;
 }
 .circle {
     stroke: white;

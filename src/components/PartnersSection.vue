@@ -7,7 +7,7 @@
             <v-row align="center" justify="center" style="padding-top: 40px">
                 <v-col>
                     <v-sheet class="mx-auto" max-width="1200">
-                        <v-slide-group multiple show-arrows>
+                        <v-slide-group light multiple show-arrows>
                             <v-slide-item
                                 v-for="(partner, index) in partners"
                                 :key="index"
@@ -75,3 +75,11 @@ export default {
     },
 };
 </script>
+
+<style>
+.v-icon.notranslate.mdi.mdi-chevron-right.theme--light,
+.v-icon.notranslate.mdi.mdi-chevron-left.theme--light {
+    color: white !important;
+    font-size: 32px;
+}
+</style>

@@ -1,5 +1,5 @@
 <template>
-    <div class="container" style="max-width: 1000px">
+    <v-container>
         <h1
             class="display-3 text-center white--text font-weight-bold"
             data-aos="fade-down"
@@ -16,14 +16,14 @@
                 data-aos-delay="200"
             >
                 <div class="swiper-container">
-                    <!-- <p class="swiper-control">
-                        <v-btn text color="white" class="prev-slide"
+                    <p class="swiper-control">
+                        <!-- <v-btn text color="white" class="prev-slide"
                             >Prev</v-btn
-                        >
+                        > -->
                         <v-btn text color="white" class="next-slide"
                             >Next</v-btn
                         >
-                    </p> -->
+                    </p>
                     <div class="swiper-wrapper timeline">
                         <div
                             class="swiper-slide"
@@ -42,7 +42,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </v-container>
 </template>
 
 <script>
@@ -86,9 +86,8 @@ export default {
             parallax: true,
         });
         swiper.on("slideChange", function (event) {
-            console.log(event);
             event.allowSlideNext = true;
-            if (event.activeIndex == 5) {
+            if (event.activeIndex == 1) {
                 event.allowSlideNext = false;
             }
         });
