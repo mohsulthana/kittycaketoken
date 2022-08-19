@@ -4,7 +4,7 @@
             <v-col cols="10">
                 <v-img
                     ref="bigCatImage"
-                    class="bigcat"
+                    class="bigcat hidden-md-and-down"
                     src="@/assets/img/cat-final.webp"
                     :style="{
                         top: topPosition,
@@ -17,12 +17,23 @@
                 <v-col
                     cols="12"
                     lg="6"
-                    md="12"
+                    md="6"
+                    sm="6"
                     xl="8"
                     :z-index="99"
                     :align-self="start"
                 >
-                    <h1 class="display-4 font-weight-bold mb-4">
+                    <h1
+                        class="
+                            text-xl-h1
+                            text-lg-h1
+                            text-md-h2
+                            text-sm-h3
+                            text-xs-h3
+                            font-weight-bold
+                            mb-4
+                        "
+                    >
                         Hold KittyCake. <br />
                         Earn passive income paid in Cake.
                     </h1>
@@ -129,14 +140,14 @@ export default {
     },
     methods: {
         positionScroll() {
-            let imageStyle = this.$refs.bigCatImage.$el.style;
-            let distanceToTop = window.scrollY;
+            if (!this.$vuetify.breakpoint.mdAndDown) {
+                let imageStyle = this.$refs.bigCatImage.$el.style;
+                let distanceToTop = window.scrollY;
 
-            if (distanceToTop < 900) {
-                imageStyle.top = window.scrollY * 3.3 + "px";
-                imageStyle.opacity = 1;
-            } else {
-                imageStyle.opacity = 0;
+                if (distanceToTop < 900) {
+                    imageStyle.top = window.scrollY * 3.3 + "px";
+                imageStyle.opacity = 1 - distanceToTop / 300;
+                }
             }
         },
         ready(event) {

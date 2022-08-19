@@ -2,7 +2,7 @@
     <v-container id="roadmap">
         <h1
             class="display-3 text-center white--text font-weight-bold" style="margin: 90px 0"
-            data-aos="fade-down"
+            data-aos="fade-up"
             data-aos-duration="500"
             data-aos-delay="200"
         >
@@ -13,7 +13,7 @@
                 class="col-md-12"
                 data-aos="flip-down"
                 data-aos-duration="500"
-                data-aos-delay="200"
+                data-aos-delay="800"
             >
                 <div class="swiper-container">
                     <p class="swiper-control">

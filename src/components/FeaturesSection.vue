@@ -3,7 +3,7 @@
         <v-container fluid id="features" style="margin: 120px 0">
             <h1
                 class="display-3 text-center white--text font-weight-bold"
-                data-aos="fade-down"
+                data-aos="fade-up"
                 data-aos-duration="500"
                 data-aos-delay="200"
                 style="margin: 130px 0"
@@ -19,7 +19,7 @@
                             class="text-left"
                             data-aos="fade-up"
                             data-aos-duration="500"
-                            :data-aos-delay="i % 2 === 0 ? 200 : 800"
+                            :data-aos-delay="200 + (i * 300)"
                             v-for="(feature, i) in features"
                             :key="i"
                         >

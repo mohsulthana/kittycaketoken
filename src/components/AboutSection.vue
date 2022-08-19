@@ -3,7 +3,7 @@
         <v-container fluid>
             <v-row align="center" justify="center">
                 <v-col cols="10">
-                    <v-row align="center" justify="center" class="py-8">
+                    <v-row align="center" justify="center" class="py-4">
                         <v-col
                             cols="12"
                             md="3"
@@ -25,11 +25,11 @@
                             data-aos-duration="500"
                             data-aos-delay="200"
                         >
-                            <h1 class="font-weight-medium display-3">
+                            <h1 class="font-weight-medium text-sm-h2">
                                 KittyCake is an advanced hyper-deflationary
                                 auto-rewards token on the Binance Smart Chain.
                             </h1>
-                            <h1 class="font-weight-light display-2">
+                            <h1 class="font-weight-light text-sm-h3">
                                 KittyCake rewards holders with his favorite
                                 food, $CAKE, every hour! We also have a
                                 dashboard to track your $CAKE rewards
@@ -57,7 +57,7 @@
     z-index: 9999;
     display: flex;
     align-items: center;
-    height: 660px;
+    height: 260px;
     color: white;
 }
 </style>

@@ -1,6 +1,11 @@
 <template>
     <v-footer dark>
-        <v-container class="my-8">
+        <v-container
+            class="my-8"
+            data-aos="fade-up"
+            data-aos-duration="500"
+            data-aos-delay="200"
+        >
             <v-row justify="end" align="start">
                 <v-col sm="12" md="6">
                     <v-card

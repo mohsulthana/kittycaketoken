@@ -1,10 +1,22 @@
 <template>
     <section id="partners">
         <v-container fluid>
-            <h1 class="display-3 text-center white--text font-weight-bold">
+            <h1
+                class="display-3 text-center white--text font-weight-bold"
+                data-aos="fade-up"
+                data-aos-duration="500"
+                data-aos-delay="200"
+            >
                 Our Partners
             </h1>
-            <v-row align="center" justify="center" style="padding-top: 40px">
+            <v-row
+                align="center"
+                justify="center"
+                style="padding-top: 40px"
+                data-aos="fade-up"
+                data-aos-duration="500"
+                data-aos-delay="200"
+            >
                 <v-col>
                     <v-sheet class="mx-auto" max-width="1200">
                         <v-slide-group light multiple show-arrows>
