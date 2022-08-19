@@ -145,8 +145,8 @@ export default {
                 let distanceToTop = window.scrollY;
 
                 if (distanceToTop < 900) {
-                    imageStyle.top = window.scrollY * 3.3 + "px";
-                imageStyle.opacity = 1 - distanceToTop / 300;
+                    imageStyle.top = -(window.scrollY * 3.3) + "px";
+                    imageStyle.opacity = 1 - distanceToTop / 400;
                 }
             }
         },
