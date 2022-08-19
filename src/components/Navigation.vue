@@ -59,8 +59,14 @@
                 <v-btn text @click="$vuetify.goTo('#features')">
                     <span class="mr-2">Our Features</span>
                 </v-btn>
-                <v-btn text @click="$vuetify.goTo('#pricing')">
-                    <span class="mr-2">See Products</span>
+                <v-btn text @click="$vuetify.goTo('#roadmap')">
+                    <span class="mr-2">Roadmap</span>
+                </v-btn>
+                <v-btn text @click="$vuetify.goTo('#buy')">
+                    <span class="mr-2">How To Buy</span>
+                </v-btn>
+                <v-btn text @click="$vuetify.goTo('#faq')">
+                    <span class="mr-2">FAQ</span>
                 </v-btn>
                 <v-btn
                     color="primary"

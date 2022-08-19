@@ -23,10 +23,10 @@
         <v-container>
             <h1
                 class="display-3 text-left white--text font-weight-bold"
-                style="margin-bottom: 80px"
                 data-aos="fade-down"
                 data-aos-duration="500"
                 data-aos-delay="200"
+                style="margin-bottom: 130px"
             >
                 Are You Ready To <span class="primary--text">Buy?</span>
             </h1>

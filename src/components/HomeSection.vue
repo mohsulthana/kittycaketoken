@@ -130,13 +130,14 @@ export default {
     methods: {
         positionScroll() {
             let imageStyle = this.$refs.bigCatImage.$el.style;
-            var currentTop = this.$refs.bigCatImage.$el.offsetTop;
+            let distanceToTop = window.scrollY;
 
-            // if (document.body.scrollTop === 0) {
-            //     imageStyle.top = currentTop + 20 + "px";
-            // } else {
-            //     imageStyle.top = currentTop - 20 + "px";
-            // }
+            if (distanceToTop < 900) {
+                imageStyle.top = window.scrollY * 3.3 + "px";
+                imageStyle.opacity = 1;
+            } else {
+                imageStyle.opacity = 0;
+            }
         },
         ready(event) {
             this.player = event.target;

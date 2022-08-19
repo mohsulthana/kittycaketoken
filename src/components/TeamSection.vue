@@ -8,7 +8,7 @@
                 data-aos-delay="200"
                 style="margin: 130px 0"
             >
-                Features We Provide You
+                Teams
             </h1>
             <v-row align="center" justify="center" class="my-8">
                 <v-col cols="10">
@@ -20,7 +20,7 @@
                             data-aos="fade-up"
                             data-aos-duration="500"
                             :data-aos-delay="i % 2 === 0 ? 200 : 800"
-                            v-for="(feature, i) in features"
+                            v-for="(feature, i) in 5"
                             :key="i"
                         >
                             <v-hover v-slot:default="{ hover }">
@@ -30,16 +30,14 @@
                                     :class="{ up: hover }"
                                 >
                                     <v-img
-                                        :src="feature.img"
+                                        src="@/assets/img/icon/icon3.webp"
                                         max-width="70px"
                                         class="d-block mr-auto"
                                         :class="{ 'zoom-efect': hover }"
                                     ></v-img>
-                                    <h1 class="font-weight-bold">
-                                        {{ feature.title }}
-                                    </h1>
-                                    <p class="font-weight-regular subtitle-2">
-                                        {{ feature.text }}
+                                    <h1 class="font-weight-bold">Name</h1>
+                                    <p class="font-weight-regular subtitle-1">
+                                        Title
                                     </p>
                                 </v-card>
                             </v-hover>

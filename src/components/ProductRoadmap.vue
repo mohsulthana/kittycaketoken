@@ -1,7 +1,7 @@
 <template>
-    <v-container>
+    <v-container id="roadmap">
         <h1
-            class="display-3 text-center white--text font-weight-bold"
+            class="display-3 text-center white--text font-weight-bold" style="margin: 90px 0"
             data-aos="fade-down"
             data-aos-duration="500"
             data-aos-delay="200"

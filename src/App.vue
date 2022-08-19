@@ -7,6 +7,7 @@
             <features />
             <product-roadmap />
             <buy />
+            <team />
             <faq />
             <partners />
         </v-main>
@@ -38,6 +39,7 @@
     );
     background-blend-mode: multiply;
     backdrop-filter: blur(100px);
+    scroll-behavior: smooth;
 }
 .theme--light.v-expansion-panels
     .v-expansion-panel-header
@@ -55,6 +57,7 @@ import about from "./components/AboutSection";
 import features from "./components/FeaturesSection";
 import partners from "./components/PartnersSection";
 import buy from "./components/BuySection";
+import team from "./components/TeamSection";
 import faq from "./components/FAQSection";
 import ProductRoadmap from "./components/ProductRoadmap.vue";
 
@@ -69,6 +72,7 @@ export default {
         about,
         partners,
         buy,
+        team,
         faq,
         ProductRoadmap,
     },
