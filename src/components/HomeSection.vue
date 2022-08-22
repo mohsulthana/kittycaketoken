@@ -29,7 +29,7 @@
                             text-lg-h1
                             text-md-h2
                             text-sm-h3
-                            text-xs-h3
+                            text-h2
                             font-weight-bold
                             mb-4
                         "

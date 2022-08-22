@@ -40,6 +40,7 @@
             :color="color"
             :flat="flat"
             dark
+            absolute
             class="px-12"
             :class="{ expand: flat }"
         >
